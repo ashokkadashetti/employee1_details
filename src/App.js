@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Provider } from "react-redux";
+
+import "./App.css";
+import { store } from "./redux/store";
+import DepartmentList from "./components/DepartmentList";
+import HeaderComponent from "./components/HeaderComponent";
+import EmployeesList from "./components/EmployeesList";
 
 function App() {
+  const [idDept, setIdDept] = useState(null);
+
+  const handleOnDepartmentChange = (deptartmentId) => {
+    setIdDept(deptartmentId)
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <div>
+          <HeaderComponent />
+        </div>
+        <div>{idDept ? <EmployeesList /> : <h1 className="welcome"></h1>}</div>
+        <div>
+          <DepartmentList handleOnDepartmentChange={handleOnDepartmentChange} />
+        </div>
+      </div>
+    </Provider>
   );
 }
 

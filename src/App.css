@@ -1,38 +1,133 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+html,
+body,
+.app {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  justify-content: center;
+  padding: 1em;
+  color: rgb(248, 242, 242);
+  display: flex;
+  width: 100%;
+  height: 90px;
+  background-color: rgb(78, 49, 49);
+}
+
+.nav-bar {
+  position: relative;
+  background-color: #4493d4;
+  width: 300px;
+  height: 763px;
+  justify-content: start;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-text {
   display: flex;
-  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.link-text {
+  font-size: larger;
+  color: rgb(230, 43, 83);
+}
+
+.highlight {
+  color: rgb(14, 2, 2);
+  font-size: larger;
+}
+
+.nav-text a:hover {
+  background: #f58774;
+}
+
+table {
+  display: flex;
+  position: relative;
+  border: 2px solid rgb(189, 186, 186);
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
+}
+
+.form-class input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.2rem 0.8rem 0.4rem;
+  margin: 0.9vw 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form-class textarea {
+  height: 15vh;
+}
+
+.emp-details {
+  position: absolute;
+  width: 100%;
+  height: 89.5%;
+  padding-top: 40px;
+  padding-left: 500px;
+  color: black;
+}
+
+.welcome {
+  position: absolute;
+  width: 100%;
+  height: 89.5%;
+  padding-top: 0px;
+  padding-left: 42vh;
+  justify-content: start;
+  align-items: center;
+  background-image: url("https://thewebdev.info/wp-content/uploads/2020/07/d0injibzoww-1200x800.jpg");
+}
+
+.edit-button {
+  border-width: 0;
+  background-color: #faf4f3;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100;
+  height: 100;
+}
+
+.delete-button {
+  border-width: 0;
+  background-color: #f7f1f0;
+  align-items: center;
+  justify-content: center;
+  width: 100;
+  height: 100;
+}
+
+.add-dept {
+  margin-right: 120px;
+  height: 30px;
+  width: 150px;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-width: 0;
+  background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
 }
